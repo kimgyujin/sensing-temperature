@@ -72,8 +72,10 @@ app.get('/graph', function (req, res) {
 
       res.writeHeader(200, {"Content-Type": "text/html"});
       res.write(html);
-      res.write("start time: " + sy + "-" + sM + "-" + sd + " " + sh + ":" + sm + ":" + ss + "\n");
-      res.write("last time: " + ey + "-" + eM + "-" + ed + " " + eh + ":" + em + ":" + es + "\n");
+      res.write("start time: " + sy + "-" + sM + "-" + sd + " " + sh + ":" + sm + ":" + ss + '<br \>');
+      res.write("last time: " + ey + "-" + eM + "-" + ed + " " + eh + ":" + em + ":" + es + '<br \>');
+      res.write("my arduino code: " + '<a href="https://github.com/kimgyujin/sensing-temperature/blob/master/graph.ino" target="_blank">' + "https://github.com/kimgyujin/sensing-temperature/blob/master/graph.ino" + '</a>' + '<br \>');
+      res.write("my javascript code: " + '<a href="https://github.com/kimgyujin/sensing-temperature/blob/master/graph.js" target="_blank">' +  "https://github.com/kimgyujin/sensing-temperature/blob/master/graph.js" + '</a>' + '<br \>');
       res.end();
     });
   });
